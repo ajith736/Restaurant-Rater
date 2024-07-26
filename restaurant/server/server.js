@@ -142,12 +142,15 @@ app.listen(process.env.PORT, () => {
   console.log(`server is up and listening on port`);
 });
 
-app.get('/', async(res, req) => {
+app.get('/', async (req, res) => {
   try {
     res.json({
-      msg:"working"
-    })
+      msg: "working"
+    });
   } catch (error) {
-    
+    res.status(500).json({
+      msg: "Internal server error",
+      error: error.message
+    });
   }
-})
+});
