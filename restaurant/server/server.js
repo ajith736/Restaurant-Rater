@@ -139,7 +139,7 @@ app.post("/api/v1/restaurants/:id/addReview", async (req, res) => {
 
 // const port = process.env.PORT || 3001;
 app.listen(process.env.PORT, () => {
-  console.log(`server is up and listening on port ${port}`);
+  console.log(`server is up and listening on port`);
 });
 
 app.get('/', async(res, req) => {
