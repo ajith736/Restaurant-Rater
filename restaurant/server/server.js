@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const db = require("./db");
+require('dotenv').config()
 
 const morgan = require("morgan");
 
@@ -136,8 +137,8 @@ app.post("/api/v1/restaurants/:id/addReview", async (req, res) => {
   }
 });
 
-const port = process.env.PORT || 3001;
-app.listen(port, () => {
+// const port = process.env.PORT || 3001;
+app.listen(process.env.PORT, () => {
   console.log(`server is up and listening on port ${port}`);
 });
 
